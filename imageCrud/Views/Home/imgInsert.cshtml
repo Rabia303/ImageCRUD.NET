@@ -1,0 +1,14 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "imgInsert";
+}
+
+<h1>imgInsert</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="text" asp-for="EmpName" />
+    <input type="file" name="img" />
+    <input type="submit" value="Add" />
+</form>
+
+<p style="color:red">@ViewBag.e</p>

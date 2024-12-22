@@ -1,0 +1,12 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "edit";
+}
+
+<h1>edit</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="text" asp-for="EmpName" />
+    <input type="file" name="img" />
+    <input type="submit" value="Edit" />
+</form>

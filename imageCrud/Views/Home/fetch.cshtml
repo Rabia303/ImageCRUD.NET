@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Employee>
+@{
+    ViewData["Title"] = "fetch";
+}
+
+<h1>fetch</h1>
+
+
+    
+
+    <div class="row">
+    @foreach (var i in Model)
+    {
+        <div class="col-lg-4">
+            <div class="card">
+                <img src="~/@i.EmpImg" class="card-img-top" height="250" width="250" />
+                <div class="card-body">
+                    <h5 class="card-title">Employee ID @i.EmpId</h5>
+                    <p class="card-text">@i.EmpName</p>
+                    <a asp-route-EmpId="@i.EmpId" asp-action="edit">Edit</a>
+                    <a asp-route-EmpId="@i.EmpId" asp-action="delete">Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+
+
